@@ -1,0 +1,8 @@
+// 文字省略
+@mixin tof($row) {
+    display: -webkit-box;
+    -webkit-line-clamp: $row;
+    overflow: hidden;
+    line-break: normal;
+    -webkit-box-orient: vertical;
+}

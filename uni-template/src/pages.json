@@ -1,0 +1,41 @@
+{
+    "pages": [
+        {
+            "path": "pages/index/index",
+            "style": {
+                "navigationBarTitleText": "INDEX"
+            }
+        },
+        {
+            "path": "pages/demo/index",
+            "style": {
+                "navigationBarTitleText": "DEMO 示例"
+            }
+        },
+        {
+            "path": "pages/demo/view",
+            "style": {
+                "navigationBarTitleText": "资源预览"
+            }
+        },
+        {
+            "path": "pages/demo/product/list",
+            "style": {
+                "navigationBarTitleText": "建筑产品列表"
+            }
+        },
+        {
+            "path": "pages/demo/product/detail",
+            "style": {
+                "navigationBarTitleText": "建筑产品详情",
+                "enablePullDownRefresh": true
+            }
+        }
+    ],
+    "globalStyle": {
+        "navigationBarTextStyle": "white",
+        "navigationBarTitleText": "INDEX CENTER",
+        "navigationBarBackgroundColor": "#11a9e8",
+        "backgroundColor": "#11a9e8"
+    }
+}
