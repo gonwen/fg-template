@@ -35,4 +35,9 @@
 <td>uniapp移动端多端开发模板</td>
 <td>uniapp、vue、uni-ui、Flyio</td>
 </tr>
+<tr>
+<td>manage-vue-template</td>
+<td>后台管理项目模板</td>
+<td>vue、element、axios</td>
+</tr>
 </table>

@@ -1,0 +1,56 @@
+{
+    "name": "gw-nuxt-template",
+    "version": "1.0.1",
+    "description": "NUXT TEMPLATE FOR GW",
+    "author": "gongwen <gongwen_1@163.com>",
+    "private": true,
+    "config": {
+        "nuxt": {
+            "host": "0.0.0.0",
+            "port": 3080
+        }
+    },
+    "scripts": {
+        "dev": "cross-env NODE_ENVS=DEV nuxt",
+        "test": "cross-env NODE_ENVS=TST nuxt",
+        "build": "cross-env NODE_ENVS=PRO nuxt build",
+        "testbuild": "cross-env NODE_ENVS=TST nuxt build",
+        "start": "nuxt start",
+        "devdebug": "cross-env NODE_ENVS=DEV node --inspect node_modules/nuxt/bin/nuxt",
+        "generate": "cross-env NODE_ENVS=PRO nuxt generate",
+        "lint": "eslint --fix --ext .js,.vue pages layouts components middleware plugins store api",
+        "precommit": "npm run lint"
+    },
+    "dependencies": {
+        "@nuxtjs/style-resources": "^0.1.2",
+        "ali-oss": "^6.1.1",
+        "axios": "^0.18.0",
+        "base64-url": "^2.2.1",
+        "clipboard-polyfill": "^2.8.0",
+        "element-ui": "^2.10.0",
+        "md5": "^2.2.1",
+        "nuxt": "^2.0.0",
+        "path": "^0.12.7",
+        "qrcode": "^1.3.3",
+        "qs": "^6.5.2",
+        "tinymce": "^5.0.15",
+        "webpack-spritesmith": "^1.0.1"
+    },
+    "devDependencies": {
+        "babel-eslint": "^10.0.3",
+        "core-js": "^2.6.10",
+        "cross-env": "^5.2.0",
+        "crypto-js": "^3.1.9-1",
+        "eslint": "^6.6.0",
+        "eslint-config-standard": "^14.1.0",
+        "eslint-friendly-formatter": "^4.0.1",
+        "eslint-loader": "^3.0.2",
+        "eslint-plugin-import": "^2.18.2",
+        "eslint-plugin-node": "^10.0.0",
+        "eslint-plugin-promise": "^4.2.1",
+        "eslint-plugin-standard": "^4.0.1",
+        "eslint-plugin-vue": "^6.0.1",
+        "node-sass": "^4.9.3",
+        "sass-loader": "^7.1.0"
+    }
+}
