@@ -9,8 +9,9 @@ const FILTER_FORMATER = {
              * @return    string
              * */
             price (val: string | number, type: boolean) {
-                if (!val || isNaN(Number(val))) return type ? '0万元' : '0.00元'
-                else {
+                if (!val || isNaN(Number(val))) {
+                    return type ? '0万元' : '0.00元'
+                } else {
                     const numb = type ? parseFloat((Number(val) / 10000).toFixed(2)) : Number(val).toFixed(2)
                     const str = numb.toString()
                     const arr = str.split('.')
@@ -43,8 +44,11 @@ const FILTER_FORMATER = {
                     if (model) {
                         let strlen = 0
                         for (let i = 0; i < str.length; i++) {
-                            if (str.charCodeAt(i) > 255) strlen += 2
-                            else strlen++
+                            if (str.charCodeAt(i) > 255) {
+                                strlen += 2
+                            } else {
+                                strlen++
+                            }
                             if (strlen > num) {
                                 num = i
                                 break

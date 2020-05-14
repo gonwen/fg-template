@@ -5,7 +5,9 @@ const imagePath = '../static/img'
 const cssPath = '../assets/sass'
 
 const templateStyle = (data:any) => {
-    if (!data.sprites[0]) return ''
+    if (!data.sprites[0]) {
+        return ''
+    }
     // 转换单位 px rem ...
     const unit = 'px'
     // 倍率

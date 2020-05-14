@@ -28,7 +28,6 @@ import {
 export default class LayoutsError extends Vue {
     @Prop()
     private error: any
-
     create () {
         //
     }
