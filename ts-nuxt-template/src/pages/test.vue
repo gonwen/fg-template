@@ -30,7 +30,7 @@ import {
     State,
     Mutation
 } from 'vuex-class'
-import {getUserInfo, getLinkList, getVdCode} from '../api/index'
+import {getUserInfo, getLinkList, getVdCode} from '../api'
 @Component({
     name: 'test',
     components: {},

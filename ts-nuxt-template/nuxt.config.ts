@@ -1,6 +1,5 @@
 const packageconfig = require('./package')
-const serverConfig = require('./config/server.url.conf')
-let serBaseUrl = serverConfig.serBaseUrl
+const {serBaseUrl} = require('./config/server.url.conf')
 export default {
     head: {
         title: 'nuxt ts template',
