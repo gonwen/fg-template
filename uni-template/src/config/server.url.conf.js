@@ -17,7 +17,7 @@ const TST = {
     file: 'http://resource.ciip.com/'
 }
 const confInfoGroup = {DEV, PRO, TST}
-const model = process.env.NODE_ENVS || 'DEV'
+const model = process.env.VUE_APP_NODE_ENV || 'DEV'
 
 export const serBaseUrl = confInfoGroup[model].ser
 export const serFileUrl = confInfoGroup[model].file
