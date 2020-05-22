@@ -12,7 +12,7 @@
   "config": {
     "nuxt": {
       "host": "0.0.0.0",
-      "port": 3080
+      "port": 3081
     }
   },
   "dependencies": {
@@ -41,7 +41,7 @@
     "@typescript-eslint/eslint-plugin": "^2.25.0",
     "cross-env": "^6.0.3",
     "eslint": "^6.8.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.1",
     "sass-loader": "^7.3.1",
     "webpack-spritesmith": "^1.1.0"
   }

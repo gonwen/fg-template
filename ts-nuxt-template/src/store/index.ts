@@ -1,6 +1,7 @@
 import {MutationTree, ActionTree} from 'vuex'
-import {serBaseUrl, serFileUrl} from '../../config/server.url.conf'
-
+import {serBaseUrl, serFileUrl} from '~/../config/server.url.conf'
+import {getUserInfo} from '~/api'
+getUserInfo()
 interface defState {
     token: string
     haslogin: boolean

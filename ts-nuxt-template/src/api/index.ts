@@ -1,4 +1,4 @@
-import {requestResponse} from '../../config/axios.conf'
+import {requestResponse} from '~/../config/axios.conf'
 
 export const getUserInfo = () => requestResponse('get', '/anon/resource/user')
 

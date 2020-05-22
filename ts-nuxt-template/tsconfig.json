@@ -18,9 +18,17 @@
         "resolveJsonModule": true,
         // 临时跳过 解决 ele 与 nuxt 申明冲突问题
         "skipLibCheck": true,
-        "paths": {},
+        "paths": {
+            "~/*": ["./src/*"],
+            "@/*": ["./src/*"],
+            "@src/*": ["./src/*"],
+            "@config/*": ["./config/*"]
+        },
         "types": [
             "@nuxt/types"
         ]
-    }
+    },
+    "exclude": [
+        "node_modules"
+    ]
 }

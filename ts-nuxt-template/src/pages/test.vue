@@ -15,6 +15,13 @@
         <li>
             <span class="icon icon-select-red"></span>
         </li>
+        <el-form :form="form" ref="form" :rules="formRules">
+            <el-form-item prop="name">
+                <el-input v-model="form.name"></el-input>
+            </el-form-item>
+            <el-button @click="submitForm">提交</el-button>
+        </el-form>
+        <page-index></page-index>
     </ul>
 </template>
 
@@ -30,10 +37,12 @@ import {
     State,
     Mutation
 } from 'vuex-class'
-import {getUserInfo, getLinkList, getVdCode} from '../api'
+import {getUserInfo, getLinkList, getVdCode} from '~/api'
+import pageIndex from '~/pages/index.vue'
+
 @Component({
     name: 'test',
-    components: {},
+    components: {pageIndex},
     head () {
         return {
             title: 'this is test demo and training'
@@ -54,11 +63,26 @@ export default class PageTest extends Vue {
     testAsync: string = ''
     watchText: string = ''
     watchNum: number = 0
+    form: any = {
+        name: ''
+    }
+    formRules: any = {
+        name: [
+            {required: true, message: '请输入需求名称', trigger: 'blur'}
+        ]
+    }
     // computed
     get computedTestString () {
         return '**#**' + this.watchNum + '**#**' + this.watchText + '**#**'
     }
     // methods
+    submitForm () {
+        // const ref = this.$refs.form.validate((vid: boolean, opt: any) => {
+        //     console.log('***vid***', vid)
+        //     console.log('***vid***', opt)
+        // })
+        // console.log(ref)
+    }
     inintPrice () {
         this.price = 1024 * 1024
     }
@@ -87,6 +111,8 @@ export default class PageTest extends Vue {
         )
         this.emitTodo()
         this.inintView()
+        const {data}: any = await getUserInfo()
+        console.log(data)
         const res = await getUserInfo()
         console.log('****', res)
         await getLinkList()
