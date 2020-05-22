@@ -15,7 +15,7 @@
         <li>
             <span class="icon icon-select-red"></span>
         </li>
-        <el-form :form="form" ref="form" :rules="formRules">
+        <el-form :model="form" ref="form" :rules="formRules">
             <el-form-item prop="name">
                 <el-input v-model="form.name"></el-input>
             </el-form-item>
@@ -77,11 +77,11 @@ export default class PageTest extends Vue {
     }
     // methods
     submitForm () {
-        // const ref = this.$refs.form.validate((vid: boolean, opt: any) => {
-        //     console.log('***vid***', vid)
-        //     console.log('***vid***', opt)
-        // })
-        // console.log(ref)
+        (this.$refs.form as any).validate((vid: boolean, opt: any) => {
+            console.log('***vid***', vid)
+            console.log('***vid***', opt)
+        })
+        console.log((this.$refs.form as any).validate)
     }
     inintPrice () {
         this.price = 1024 * 1024
