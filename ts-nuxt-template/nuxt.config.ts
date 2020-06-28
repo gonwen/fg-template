@@ -1,5 +1,4 @@
 const packageconfig = require('./package')
-const {serBaseUrl} = require('./config/server.url.conf')
 export default {
     head: {
         title: 'nuxt ts template',
@@ -14,11 +13,12 @@ export default {
     loading: {color: '#10a9e9'},
     buildModules: ['@nuxt/typescript-build'],
     modules: [
-        '@gauseen/nuxt-proxy'
+        '@gauseen/nuxt-proxy',
+        '@nuxtjs/style-resources'
     ],
     proxyTable: {
         '/apiproxy': {
-            target: serBaseUrl,
+            target: require('./config/server.url.conf').serBaseUrl,
             ws: false,
             pathRewrite: {
                 '/apiproxy': ''

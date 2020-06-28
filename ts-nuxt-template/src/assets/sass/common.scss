@@ -36,15 +36,27 @@ body {
     min-width: 1200px;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
     padding: 0;
     font-weight: normal;
 }
 
 body {
-    font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'microsoft yahei',
-    arial, STHeiTi, sans-serif;
+    font-family:
+        'PingFang SC',
+        'Helvetica Neue',
+        Helvetica,
+        'microsoft yahei',
+        arial,
+        STHeiTi,
+        sans-serif;
     margin: 0;
     padding: 0;
 
@@ -57,21 +69,21 @@ body {
     width: 1200px;
     margin: 0 auto;
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
         display: table;
         content: ' ';
         clear: both;
     }
 }
 
-.clearfix:before,
-.clearfix:after {
+.clearfix::before,
+.clearfix::after {
     content: '';
     display: table;
 }
 
-.clearfix:after {
+.clearfix::after {
     clear: both;
 }
 

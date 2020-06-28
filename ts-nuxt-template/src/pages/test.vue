@@ -15,11 +15,13 @@
         <li>
             <span class="icon icon-select-red"></span>
         </li>
-        <el-form :model="form" ref="form" :rules="formRules">
+        <el-form ref="form" :model="form" :rules="formRules">
             <el-form-item prop="name">
                 <el-input v-model="form.name"></el-input>
             </el-form-item>
-            <el-button @click="submitForm">提交</el-button>
+            <el-button @click="submitForm">
+                提交
+            </el-button>
         </el-form>
         <page-index></page-index>
     </ul>
@@ -156,3 +158,18 @@ export default class PageTest extends Vue {
     @Mutation setUserInfo: any
 }
 </script>
+
+<style lang="scss" scoped>
+    .icon {
+        position: relative;
+        z-index: 2;
+        display: inline;
+        margin-top: 10px;
+        padding: 10px;
+        padding-right: 20px;
+        height: 100%;
+        opacity: 0;
+        width: 100px;
+        float: right;
+    }
+</style>

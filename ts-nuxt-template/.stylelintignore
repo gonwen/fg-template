@@ -1,0 +1,10 @@
+/.nuxt/
+/build
+/dist/
+/static/
+/test/
+*.js
+*.eot
+*.ttf
+*.woff
+sprites.scss
