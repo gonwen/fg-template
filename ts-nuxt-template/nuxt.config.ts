@@ -16,15 +16,15 @@ export default {
         '@gauseen/nuxt-proxy',
         '@nuxtjs/style-resources'
     ],
-    proxyTable: {
-        '/apiproxy': {
-            target: require('./config/server.url.conf').serBaseUrl,
-            ws: false,
-            pathRewrite: {
-                '/apiproxy': ''
-            }
-        }
-    },
+    // proxyTable: {
+    //     '/apiproxy': {
+    //         target: require('./config/server.url.conf').serBaseUrl,
+    //         ws: false,
+    //         pathRewrite: {
+    //             '/apiproxy': ''
+    //         }
+    //     }
+    // },
     plugins: [
         {src: '~/plugins/element-ui'},
         {src: '~/plugins/filters'}
@@ -54,6 +54,12 @@ export default {
             if (ctx.isDev && ctx.isClient) {
                 require('./src/method/spritesmith')(config)
             }
+        }
+    },
+    html: {
+        minify: {
+            collapseWhitesapce:false,
+            collapseInlineTagWhitespace: false
         }
     },
     env: {

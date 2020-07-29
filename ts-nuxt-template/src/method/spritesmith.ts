@@ -3,6 +3,7 @@ const path = require('path')
 const SpritesmithPlugin = require('webpack-spritesmith')
 const imagePath = '../static/img'
 const cssPath = '../assets/sass'
+const cssBaseName = 'icon'
 
 const templateStyle = (data:any) => {
     if (!data.sprites[0]) {
@@ -12,13 +13,13 @@ const templateStyle = (data:any) => {
     const unit = 'px'
     // 倍率
     const px = 1
-    const shared = `.icon { display:inline-block; background-image: url(I); background-size:WSM${unit} HSM${unit}; }`
+    const shared = `.${cssBaseName} { display:inline-block; background-image: url(I); background-size:WSM${unit} HSM${unit}; }`
         .replace('I', data.sprites[0].image)
         .replace('WSM', String(data.spritesheet.width * px))
         .replace('HSM', String(data.spritesheet.height * px))
 
     const perSprite = data.sprites.map(function (sprite:any) {
-        return `.N { width: W${unit}; height: H${unit}; background-position: X${unit} Y${unit}; }`
+        return `.${cssBaseName}-N { width: W${unit}; height: H${unit}; background-position: X${unit} Y${unit}; }`
             .replace('N', sprite.name)
             .replace('W', String(sprite.width * px))
             .replace('H', String(sprite.height * px))
